@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Senku</string>
+    <string name="moves">Movimientos</string>
+    <string name="time">Tiempo</string>
+</resources>
