@@ -22,38 +22,38 @@ public class SenkuTable {
     }
 
     public boolean isValidMove(int srcX, int srcY, int destX, int destY) {
-        //Solo se mueve en un eje
+        //Check if moving on one axis
         if (srcX != destX && srcY != destY) {
             return false;
         } else {
-            //Origen activado y destino desactivado
+            //Origin checked and destiny unchecked
             if (table[srcX][srcY] == 1 && table[destX][destY] == 0) {
-                //Movimiento horizontal
+                //Horizontal move
                 if (srcX != destX) {
-                    //Derecha
+                    //Right
                     if (srcX < destX) {
-                        //Medio activado
+                        //Middle button checked
                         if (srcX == destX - 2 && table[srcX + 1][srcY] == 1) {
                             return true;
                         }
-                    //Izquierda
+                    //Left
                     } else {
-                        //Medio activado
+                        //Middle button checked
                         if (destX == srcX - 2 && table[srcX - 1][srcY] == 1) {
                             return true;
                         }
                     }
-                //Movimieto vertical
+                //Vertical move
                 } else {
-                    //Abajo
+                    //Down
                     if (srcY < destY) {
-                        //Medio activado
+                        //Middle button checked
                         if (srcY == destY - 2 && table[srcX][srcY + 1] == 1) {
                             return true;
                         }
-                    //Arriba
+                    //UP
                     } else {
-                        //Medio activado
+                        //Middle button checked
                         if (destY == srcY - 2 && table[srcX][srcY - 1] == 1) {
                             return true;
                         }
@@ -71,24 +71,20 @@ public class SenkuTable {
             if (srcX < destX) {
                 table[srcX+1][srcY] = 0;
                 active--;
-                System.out.println(active);
                 return "" + (srcX + 1) + "-" + srcY;
             } else {
                 table[srcX-1][srcY] = 0;
                 active--;
-                System.out.println(active);
                 return "" + (srcX - 1) + "-" + srcY;
             }
         } else {
             if (srcY < destY) {
                 table[srcX][srcY+1] = 0;
                 active--;
-                System.out.println(active);
                 return "" + srcX + "-" + (srcY + 1);
             } else {
                 table[srcX][srcY-1] = 0;
                 active--;
-                System.out.println(active);
                 return "" + destX + "-" + (srcY - 1);
             }
         }
