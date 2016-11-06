@@ -1,6 +1,11 @@
 package com.example.kevin.senku;
 
 public class SenkuTable {
+
+    public static final int COMPLETED_WIN = 0;
+    public static final int COMPLETED_LOSE = 1;
+    public static final int NOT_COMPLETED = 2;
+
     private final int[][] table = new int[7][7];
     private int active = 0;
 
@@ -90,7 +95,13 @@ public class SenkuTable {
         }
     }
 
-    public boolean isFinished() {
-        return active == 1;
+    public int isFinished() {
+        if (active > 1) {
+            return NOT_COMPLETED;
+        } else if (active == 1 && table[3][3] == 1) {
+            return COMPLETED_WIN;
+        } else {
+            return COMPLETED_LOSE;
+        }
     }
 }
