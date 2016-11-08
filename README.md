@@ -7,8 +7,8 @@ When achieving the winning state, which has a single sphere standing in the cent
 
 Starting point:
 
-![Starting point](https://cloud.githubusercontent.com/assets/22131547/20118099/91164de2-a603-11e6-8d0b-4b1b22b5ca78.png)
+![Starting point](https://cloud.githubusercontent.com/assets/22131547/20119549/35b80584-a609-11e6-8766-3d1454b32441.png)
 
 
 Completing the Senku:
-![Completed](https://cloud.githubusercontent.com/assets/22131547/20118108/940c3bc4-a603-11e6-9cd8-db488a7a7cd2.png)
+![Completed](https://cloud.githubusercontent.com/assets/22131547/20119555/3dcf8c24-a609-11e6-9e9d-83226b57c9f2.png)
