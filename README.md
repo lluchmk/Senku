@@ -6,6 +6,7 @@ If it's a valid move it will be done, if not, a Toast will inform that the move 
 When achieving the winning state, which has a single sphere standing in the center, a Tost will congratulate the user informing of the amount of moves and the time spent.
 
 Starting point:
+
 ![Starting point](https://cloud.githubusercontent.com/assets/22131547/20118099/91164de2-a603-11e6-8d0b-4b1b22b5ca78.png)
 
 
