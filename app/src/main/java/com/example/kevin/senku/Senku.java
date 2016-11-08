@@ -112,7 +112,6 @@ public class Senku extends AppCompatActivity {
             moves = 0;
             ((TextView) findViewById(R.id.varMoves)).setText(String.valueOf(moves));
             ((Chronometer) findViewById(R.id.varTime)).setBase(SystemClock.elapsedRealtime());
-            //((Chronometer) findViewById(R.id.varTime)).start();
         }
     };
 }
