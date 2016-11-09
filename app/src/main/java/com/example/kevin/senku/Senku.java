@@ -19,7 +19,6 @@ public class Senku extends AppCompatActivity {
     SenkuTable table = new SenkuTable();
     int moves = 0;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -110,8 +109,24 @@ public class Senku extends AppCompatActivity {
             table = new SenkuTable();
             initButtons();
             moves = 0;
+            first = true;
             ((TextView) findViewById(R.id.varMoves)).setText(String.valueOf(moves));
             ((Chronometer) findViewById(R.id.varTime)).setBase(SystemClock.elapsedRealtime());
         }
     };
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putInt("Moves", moves);
+        outState.putLong("Time",((Chronometer)findViewById(R.id.varTime)).getBase());
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        moves = savedInstanceState.getInt("Moves");
+        ((TextView) findViewById(R.id.varMoves)).setText(String.valueOf(moves));
+        ((Chronometer) findViewById(R.id.varTime)).setBase(savedInstanceState.getLong("Time"));
+    }
 }
