@@ -1,9 +1,9 @@
 package com.example.kevin.senku;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.support.constraint.ConstraintLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +12,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Senku extends AppCompatActivity {
+public class Senku extends Activity {
 
     Bundle pBundle = new Bundle();
     boolean first = true;
